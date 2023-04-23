@@ -1,0 +1,32 @@
+//icon coeur
+@keyframes fill {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.3;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  // page menu fondu
+  @keyframes fadein {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+  }
+//hover check
+  @keyframes rotate {
+    from{
+      -webkit-transform: rotate(0deg);
+    }
+    to{
+      -webkit-transform: rotate(360deg);
+    }
+  }

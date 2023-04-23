@@ -1,0 +1,259 @@
+@import "./rest";
+@import "./var";
+@import "./mixins";
+@import "./keyframes";
+
+body{
+    font-family:  'Roboto', sans-serif;
+    /*display: flex;*/
+    justify-content: center;
+}
+
+h2{
+    padding: 20px;
+   }
+
+.header{
+    text-align: center;
+    width: 100%;
+
+    &__logo{
+        @include headerLogo;
+    }
+    @include  header-page;
+
+    &__map{
+
+         @include headerMaps; 
+     }
+   }
+
+ /* présentation entreprise*/
+
+ .Apropos{
+    @include apropos;
+
+   h1{
+    padding: 15px 0px;
+    font-size: 1.5em;
+   }
+   p{
+    padding-bottom: 20px ;
+   }
+   .Apropos__btn{
+    padding-bottom: 30px;
+   }
+
+   .Apropos__btn button{
+      @include aproposBtn;
+        &:hover {
+            background-color: lighten($clr-Primaire, 10%);
+            background-blend-mode: lighten;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        } 
+    }
+    }
+/****Fonctionnement*****/
+.functioning{ 
+  padding: 0px 10px 20px 10px;
+ 
+  &__steps{
+    li{
+      @include functioningList;
+        &:hover{
+        background: $clr-gris-clair;
+        }
+        &:hover .fas{
+        color:$clr-Primaire;
+        }
+       }
+  @include functioningText;
+}
+}
+/****Restaurants*****/
+
+.new {
+  @include badge-card;
+  }
+
+.like {
+  @include heart;
+}
+.card {
+    @include card;
+}
+  .card img {
+    @include card-img ;
+  }
+  .restaurant__section{
+    background: $clr-gris-clair;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:40px ;
+
+  }
+  .heart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card {
+    .big{
+      @include card-big;
+    }
+  }
+
+  .card {
+    .info{
+      @include card-info;
+    }
+  }
+
+  .heart h3 {
+    font-size: 1.125rem;
+  }
+  .card p {
+    font-size: 1.063rem;
+    font-weight: 300;
+  }
+
+  /*******footer********/
+  
+footer {
+background-color: $clr-footer;
+padding: 25px;
+color:  $clr-white;
+}
+
+footer h3{
+  font-family: "Shrikhand", "sans-serif";;
+  padding: 5px 0px 20px 0px;
+  font-size:1.5em;
+
+}
+ul {
+  li {
+      padding: 5px 0 5px 0;
+      a {
+        color: $clr-white;
+        font-size: 1rem;
+       }
+    }
+}
+
+  .fa-utensils {
+    margin-right: 10px;
+  }
+  .fa-hands-helping {
+    margin-right: 4px;
+  }
+
+  /*******pages*****/
+  .imgMenu {
+    img{
+     @include imgMenu;
+    }
+  }
+  .menu-restaurant{
+   @include menu-restaurant;
+  }
+  .nom-menu{
+   @include nom-menu;
+  }
+
+  .menu{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    }
+    
+  .plat {
+    
+    h2{ padding: 0px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 300; 
+   }
+
+   p{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+   }
+
+    @include plat-prix;
+
+  }
+
+  .ligne{
+    width: 40px;
+    border: 2px solid $clr-Tertiaire;
+    margin: 7px 0px;
+  }
+
+  .repas{
+    background-color: $clr-white;
+    border-radius: 15px;
+    margin: 10px 0px;
+    padding: 10px;
+    height: 63px;
+    box-shadow: 4px 4px 6px  rgba(0, 0, 0, 0.25);
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: padding-right 450ms ease-in-out;
+     &:hover {
+     padding-right: 80px;
+     }
+     &:hover .check {
+     opacity: 1;
+     transform: translate(-50px);
+      }
+      &:hover .fa-circle-check {
+      // transform: rotate(360deg) ;
+       animation: rotate 500ms ease-in-out;
+      }
+   }
+
+  .entrees{
+    animation: fadein 3s ease-in-out;
+  }
+  .plats{
+    animation: fadein 6s ease-in-out;
+  }
+
+  .desserts{
+  animation: fadein 9s ease-in-out;
+  }
+
+ .commande{
+  display: flex;
+  justify-content: center;
+  &__btn{
+   @include btn-commande; 
+  }
+ } 
+.check{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 63px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top:0%;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
+  & .fa-circle-check{
+    color: $clr-white;
+    font-size: 30px;
+    // transition: transform 500ms ease-in-out;
+  }
+   
+}
