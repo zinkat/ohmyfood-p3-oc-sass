@@ -2,6 +2,7 @@
 @import "./var";
 @import "./mixins";
 @import "./keyframes";
+@import"./responsive.scss";
 
 body{
     font-family:  'Roboto', sans-serif;
@@ -9,8 +10,96 @@ body{
     justify-content: center;
 }
 
+.loader{
+  background-image: $linear-gradient;
+  font-size: 3em;
+  font-family: Shrikhand, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  color: $clr-Tertiaire;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  animation: loader 1s ease-in-out 3s forwards;
+  &__name span{
+    position: absolute;
+    opacity:0;
+    margin-left: -200px;
+    width: 100%;
+    top: 40%;
+    left: 20%;
+    padding-right: 1em;
+    // transform: rotate(180deg);
+    // -webkit-transform:rotate(180deg);
+    //animation:move 2s linear  infinite;
+    //-webkit-animation:move 2s linear infinite;
+
+  }
+  .loader__name span:nth-child(1) {
+    // animation-delay:0s;
+    // -webkit-animation-delay:0s;
+    animation:move 2s linear  infinite;
+  }
+  
+  .loader__name span:nth-child(2) {
+    // animation-delay:0.2s;
+    // -webkit-animation-delay:0.2s;
+    animation:move 2s  linear 0.2s infinite;
+  }
+  .loader__name span:nth-child(3) {
+    // animation-delay:0.4s;
+    // -webkit-animation-delay:0.4s;
+    animation:move 2s  linear 0.4s infinite;
+  }
+  .loader__name span:nth-child(4) {
+    // animation-delay:0.6s;
+    // -webkit-animation-delay:0.6s;
+    animation:move 2s  linear 0.6s infinite;
+  }
+  .loader__name span:nth-child(5) {
+    // animation-delay:0.8s;
+    // -webkit-animation-delay:0.8s;
+    animation:move 2s  linear 0.8s infinite;
+  }
+  .loader__name span:nth-child(6) {
+    // animation-delay:1s;
+    // -webkit-animation-delay:1s;
+    animation:move 2s  linear 1s infinite;
+  }
+  .loader__name span:nth-child(7) {
+    // animation-delay:1.2s;
+    // -webkit-animation-delay:1.2s;
+    animation:move 2s  linear 1.2s infinite;
+  }
+  .loader__name span:nth-child(8) {
+    // animation-delay:1.4s;
+    // -webkit-animation-delay:1.4s;
+    animation:move 2s  linear 1.4s infinite;
+  }
+
+
+  &__utensils {
+    vertical-align: middle;
+    position: absolute;
+    top:50%;
+    left: 45%;
+    animation: turn 2s cubic-bezier(0.32, 0.1, 0.64, 0.86) infinite;
+  }
+
+}
+
+
+
+///
+
 h2{
-    padding: 20px;
+  padding: 50px 20px 10px 20px;
    }
 
 .header{
@@ -39,6 +128,7 @@ h2{
    }
    p{
     padding-bottom: 20px ;
+    font-size: 1.125em;
    }
    .Apropos__btn{
     padding-bottom: 30px;
@@ -55,9 +145,22 @@ h2{
     }
 /****Fonctionnement*****/
 .functioning{ 
-  padding: 0px 10px 20px 10px;
- 
+  padding: 0px 10px 50px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   &__steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media #{$meduim-screen} {
+      flex-wrap: wrap;
+      
+    }
+   
+   
     li{
       @include functioningList;
         &:hover{
@@ -85,13 +188,18 @@ h2{
   .card img {
     @include card-img ;
   }
-  .restaurant__section{
-    background: $clr-gris-clair;
-    display: flex;
-    flex-direction: column;
-    padding-bottom:40px ;
+  .restaurant{
 
+    background: $clr-gris-clair;
+    
+    &__section{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom:40px ;
+    }
   }
+ 
   .heart {
     display: flex;
     justify-content: space-between;
@@ -126,10 +234,11 @@ color:  $clr-white;
 }
 
 footer h3{
-  font-family: "Shrikhand", "sans-serif";;
+  font-family: "Shrikhand", "sans-serif";
   padding: 5px 0px 20px 0px;
-  font-size:1.5em;
-
+  font-size:1.2em;
+   font-style: italic;
+   font-weight: 400;
 }
 ul {
   li {
@@ -158,6 +267,10 @@ ul {
    @include menu-restaurant;
   }
   .nom-menu{
+    h1{
+     font-style: italic;
+     font-weight: 400;
+    }
    @include nom-menu;
   }
 
@@ -168,8 +281,9 @@ ul {
     }
     
   .plat {
-    
-    h2{ padding: 0px;
+
+    h2{ 
+    padding: 0px;
     font-size: 1em;
     text-transform: uppercase;
     font-weight: 300; 
@@ -206,11 +320,12 @@ ul {
     transition: padding-right 450ms ease-in-out;
      &:hover {
      padding-right: 80px;
+     .check {
+      opacity: 1;
+      transform: translate(-50px);
+       }
      }
-     &:hover .check {
-     opacity: 1;
-     transform: translate(-50px);
-      }
+   
       &:hover .fa-circle-check {
       // transform: rotate(360deg) ;
        animation: rotate 500ms ease-in-out;
@@ -231,6 +346,7 @@ ul {
  .commande{
   display: flex;
   justify-content: center;
+  background-color: $clr-gris-clair;
   &__btn{
    @include btn-commande; 
   }

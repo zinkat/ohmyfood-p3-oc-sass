@@ -3,8 +3,8 @@
         padding-top: 10px;
 
         img{
-            height: 44px;
-            width: 162px;
+            height: 50px;
+            width: 180px;
         }
 }
 
@@ -12,11 +12,12 @@
 .arrow{
     display: flex;
     justify-content: center;
-
+  
         &__fleche{
         position: absolute;
-        left: 2%;
-        top: 3%;
+        font-size: 20px;
+        left: 3%;
+        top: 3.5%;
         }
     }
 }
@@ -26,20 +27,22 @@
     flex-direction: row;
     justify-content:center;
     width: 100%;
-    padding: 15px 0px 15px 60px;
+    padding: 15px 0px;
     background-color: $clr-map;
     height: 60px;
     box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
     
     input{
-        padding: 0px 10px;
+    
         border: none;
         background-color: $clr-map  ;
+        text-align:center;
         font-size: 16px;
+        width: 140px;
     }
 
     span{
-        padding: 4px 6px;
+        padding: 4px 4px 4px 0px;
 }   
 }
 
@@ -47,6 +50,9 @@
     text-align: center;
     width: 100%;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: $clr-gris-clair;
 }
 
@@ -55,12 +61,13 @@
     background-image: $linear-gradient;
     border: 1px solid transparent;
     border-radius: 30px;
-    padding: 10px  ;
+    padding: 10px  15px;
     color:$clr-white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-family:  'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 19px;
     cursor: pointer;
 }
@@ -71,8 +78,8 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
-    padding: 25px;
-    margin: 15px 20px 15px 30px;
+    padding:  35px 25px;
+    margin: 15px;;
     border-radius: 20px;
     box-shadow: 1px 2px 8px 2px #c4c4c4;
     background-color: $clr-gris-clair;
@@ -84,6 +91,7 @@
      p{
         font-weight: 500;
         margin-left: 20px;
+    
      }
     
         &--number{
@@ -169,8 +177,11 @@
     background-color: $clr-gris-clair;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    padding: 0px 20px;
+    padding: 0px 15px;
     position: relative;
     margin-top: -50px;
   }
@@ -180,13 +191,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    line-height: 40px;
-    padding: 10px;
+    padding: 30px 0px 10px 0px;
   }
 
   @mixin plat-prix{
 
-    padding-top: 30px;
+    padding-top: 20px;
     font-size: 0.94em;
     &__prix{
       display: flex;
@@ -200,13 +210,17 @@
     background-image: $linear-gradient;
     border: 1px solid transparent;
     border-radius: 30px;
+    justify-content: center;
     color: $clr-white;
-    font-weight: bold;
+    font-family:  'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
     box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.25);;
     cursor: pointer;
     margin: 30px 0;
-    padding: 20px;
-    width: 50%;
+    padding: 15px 0px;
+    width: 55%;
     &:hover {
       background-color: lighten($clr-Primaire, 10%);
       background-blend-mode: lighten;

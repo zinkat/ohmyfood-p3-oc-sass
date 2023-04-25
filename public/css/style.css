@@ -75,14 +75,118 @@ h1 {
     -webkit-transform: rotate(360deg);
   }
 }
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes move {
+  0% {
+    left: 0;
+    opacity: 0.5;
+  }
+  35% {
+    left: 40%;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  65% {
+    left: 60%;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+}
+@keyframes turn {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    opacity: 0;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   /*display: flex;*/
   justify-content: center;
 }
 
+.loader {
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  font-size: 3em;
+  font-family: Shrikhand, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  color: rgb(152, 226, 207);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  animation: loader 1s ease-in-out 3s forwards;
+}
+.loader__name span {
+  position: absolute;
+  opacity: 0;
+  margin-left: -200px;
+  width: 100%;
+  top: 40%;
+  left: 20%;
+  padding-right: 1em;
+}
+.loader .loader__name span:nth-child(1) {
+  animation: move 2s linear infinite;
+}
+.loader .loader__name span:nth-child(2) {
+  animation: move 2s linear 0.2s infinite;
+}
+.loader .loader__name span:nth-child(3) {
+  animation: move 2s linear 0.4s infinite;
+}
+.loader .loader__name span:nth-child(4) {
+  animation: move 2s linear 0.6s infinite;
+}
+.loader .loader__name span:nth-child(5) {
+  animation: move 2s linear 0.8s infinite;
+}
+.loader .loader__name span:nth-child(6) {
+  animation: move 2s linear 1s infinite;
+}
+.loader .loader__name span:nth-child(7) {
+  animation: move 2s linear 1.2s infinite;
+}
+.loader .loader__name span:nth-child(8) {
+  animation: move 2s linear 1.4s infinite;
+}
+.loader__utensils {
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  animation: turn 2s cubic-bezier(0.32, 0.1, 0.64, 0.86) infinite;
+}
+
 h2 {
-  padding: 20px;
+  padding: 50px 20px 10px 20px;
 }
 
 .header {
@@ -94,8 +198,8 @@ h2 {
   padding-top: 10px;
 }
 .header__logo img {
-  height: 44px;
-  width: 162px;
+  height: 50px;
+  width: 180px;
 }
 .header .arrow {
   display: flex;
@@ -103,27 +207,29 @@ h2 {
 }
 .header .arrow__fleche {
   position: absolute;
-  left: 2%;
-  top: 3%;
+  font-size: 20px;
+  left: 3%;
+  top: 3.5%;
 }
 .header__map {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  padding: 15px 0px 15px 60px;
+  padding: 15px 0px;
   background-color: #EAEAEA;
   height: 60px;
   box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
 }
 .header__map input {
-  padding: 0px 10px;
   border: none;
   background-color: #EAEAEA;
+  text-align: center;
   font-size: 16px;
+  width: 140px;
 }
 .header__map span {
-  padding: 4px 6px;
+  padding: 4px 4px 4px 0px;
 }
 
 /* présentation entreprise*/
@@ -131,6 +237,9 @@ h2 {
   text-align: center;
   width: 100%;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #F7F7F7;
 }
 .Apropos h1 {
@@ -139,6 +248,7 @@ h2 {
 }
 .Apropos p {
   padding-bottom: 20px;
+  font-size: 1.125em;
 }
 .Apropos .Apropos__btn {
   padding-bottom: 30px;
@@ -147,12 +257,13 @@ h2 {
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border: 1px solid transparent;
   border-radius: 30px;
-  padding: 10px;
+  padding: 10px 15px;
   color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 19px;
   cursor: pointer;
 }
@@ -164,7 +275,20 @@ h2 {
 
 /****Fonctionnement*****/
 .functioning {
-  padding: 0px 10px 20px 10px;
+  padding: 0px 10px 50px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.functioning__steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (min-width:768px) {
+  .functioning__steps {
+    flex-wrap: wrap;
+  }
 }
 .functioning__steps li {
   display: flex;
@@ -172,8 +296,8 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 25px;
-  margin: 15px 20px 15px 30px;
+  padding: 35px 25px;
+  margin: 15px;
   border-radius: 20px;
   box-shadow: 1px 2px 8px 2px #c4c4c4;
   background-color: #F7F7F7;
@@ -252,10 +376,13 @@ h2 {
   max-height: 220px;
 }
 
-.restaurant__section {
+.restaurant {
   background: #F7F7F7;
+}
+.restaurant__section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding-bottom: 40px;
 }
 
@@ -293,7 +420,9 @@ footer {
 footer h3 {
   font-family: "Shrikhand", "sans-serif";
   padding: 5px 0px 20px 0px;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 400;
 }
 
 ul li {
@@ -323,8 +452,11 @@ ul li a {
   background-color: #F7F7F7;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  padding: 0px 20px;
+  padding: 0px 15px;
   position: relative;
   margin-top: -50px;
 }
@@ -334,8 +466,11 @@ ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  line-height: 40px;
-  padding: 10px;
+  padding: 30px 0px 10px 0px;
+}
+.nom-menu h1 {
+  font-style: italic;
+  font-weight: 400;
 }
 
 .menu {
@@ -345,7 +480,7 @@ ul li a {
 }
 
 .plat {
-  padding-top: 30px;
+  padding-top: 20px;
   font-size: 0.94em;
 }
 .plat h2 {
@@ -412,18 +547,23 @@ ul li a {
 .commande {
   display: flex;
   justify-content: center;
+  background-color: #F7F7F7;
 }
 .commande__btn {
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border: 1px solid transparent;
   border-radius: 30px;
+  justify-content: center;
   color: white;
-  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   margin: 30px 0;
-  padding: 20px;
-  width: 50%;
+  padding: 15px 0px;
+  width: 55%;
 }
 .commande__btn:hover {
   background-color: #ae80e5;
