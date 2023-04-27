@@ -1,85 +1,88 @@
 //icon coeur
 @keyframes fill {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.3;
-    }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
 
-    100% {
-      opacity: 1;
-    }
+  100% {
+    opacity: 1;
   }
-  
-  // page menu fondu
-  @keyframes fadein {
-    from {
-      opacity:0;
-    }
-    to {
-      opacity:1;
-    }
+}
+
+// page menu fondu
+@keyframes fadein {
+  from {
+    opacity:0;
   }
+  to {
+    opacity:1;
+  }
+}
 //hover check
-  @keyframes rotate {
-    from{
-      -webkit-transform: rotate(0deg);
-    }
-    to{
-      -webkit-transform: rotate(360deg);
-
-    }
+@keyframes rotate {
+  from{
+    -webkit-transform: rotate(0deg);
   }
+  to{
+    -webkit-transform: rotate(360deg);
 
+  }
+}
   //loader
-
-  @keyframes loader {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 0;
-    }
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
   }
 
-  @keyframes move {
-    0% {
-      left:0;
-      opacity:0.5;
-    }
-    35% {
-      left: 40%; 
-      -webkit-transform:rotate(0deg);
-      transform:rotate(0deg);
-      opacity:1;
-    }
-   65% {
-      left:60%; 
-      -webkit-transform:rotate(0deg); 
-      transform:rotate(0deg); 
-      opacity:1;
-    }
-
-    100% {
-      left:100%; 
-      -webkit-transform:rotate(180deg); 
-      transform:rotate(180deg);
-      opacity:0;
-    }
+  80%{
+    opacity: 0.5;
   }
 
-  @keyframes turn{
-    from{
-      -webkit-transform: rotate(0deg);
-      opacity: 1;
-    }
-    to{
-      -webkit-transform: rotate(360deg);
-      opacity: 0;
-    }
+  100% {
+    opacity: 0;
   }
+}
+
+@keyframes move {
+  0% {
+    left:0;
+    opacity:0.5;
+  }
+  35% {
+    left: 40%; 
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg);
+    opacity:1;
+  }
+  65% {
+    left:60%; 
+    -webkit-transform:rotate(0deg); 
+    transform:rotate(0deg); 
+    opacity:0.5;
+  }
+
+  100% {
+    left:100%; 
+    -webkit-transform:rotate(180deg); 
+    transform:rotate(180deg);
+    opacity:0;
+  }
+}
+
+@keyframes turn{
+  from{
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to{
+    -webkit-transform: rotate(360deg);
+    opacity: 0;
+  }
+}
   

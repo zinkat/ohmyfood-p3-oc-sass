@@ -3,373 +3,259 @@
 @import "./mixins";
 @import "./keyframes";
 @import"./responsive.scss";
+@import"./loader.scss";
 
-body{
-    font-family:  'Roboto', sans-serif;
-    /*display: flex;*/
-    justify-content: center;
-}
-
-.loader{
-  background-image: $linear-gradient;
-  font-size: 3em;
-  font-family: Shrikhand, sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  color: $clr-Tertiaire;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  vertical-align: middle;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  right: 0;
-  pointer-events: none;
-  animation: loader 1s ease-in-out 3s forwards;
-  &__name span{
-    position: absolute;
-    opacity:0;
-    margin-left: -200px;
-    width: 100%;
-    top: 40%;
-    left: 20%;
-    padding-right: 1em;
-    // transform: rotate(180deg);
-    // -webkit-transform:rotate(180deg);
-    //animation:move 2s linear  infinite;
-    //-webkit-animation:move 2s linear infinite;
-
-  }
-  .loader__name span:nth-child(1) {
-    // animation-delay:0s;
-    // -webkit-animation-delay:0s;
-    animation:move 2s linear  infinite;
-  }
-  
-  .loader__name span:nth-child(2) {
-    // animation-delay:0.2s;
-    // -webkit-animation-delay:0.2s;
-    animation:move 2s  linear 0.2s infinite;
-  }
-  .loader__name span:nth-child(3) {
-    // animation-delay:0.4s;
-    // -webkit-animation-delay:0.4s;
-    animation:move 2s  linear 0.4s infinite;
-  }
-  .loader__name span:nth-child(4) {
-    // animation-delay:0.6s;
-    // -webkit-animation-delay:0.6s;
-    animation:move 2s  linear 0.6s infinite;
-  }
-  .loader__name span:nth-child(5) {
-    // animation-delay:0.8s;
-    // -webkit-animation-delay:0.8s;
-    animation:move 2s  linear 0.8s infinite;
-  }
-  .loader__name span:nth-child(6) {
-    // animation-delay:1s;
-    // -webkit-animation-delay:1s;
-    animation:move 2s  linear 1s infinite;
-  }
-  .loader__name span:nth-child(7) {
-    // animation-delay:1.2s;
-    // -webkit-animation-delay:1.2s;
-    animation:move 2s  linear 1.2s infinite;
-  }
-  .loader__name span:nth-child(8) {
-    // animation-delay:1.4s;
-    // -webkit-animation-delay:1.4s;
-    animation:move 2s  linear 1.4s infinite;
-  }
-
-
-  &__utensils {
-    vertical-align: middle;
-    position: absolute;
-    top:50%;
-    left: 45%;
-    animation: turn 2s cubic-bezier(0.32, 0.1, 0.64, 0.86) infinite;
-  }
-
-}
-
-
-
-///
-
-h2{
-  padding: 50px 20px 10px 20px;
-   }
-
+/**** header***/
 .header{
-    text-align: center;
-    width: 100%;
 
-    &__logo{
-        @include headerLogo;
-    }
-    @include  header-page;
+  &__logo{
+    @include headerLogo;
+  }
 
-    &__map{
+  @include  header-page;
 
-         @include headerMaps; 
-     }
-   }
+  &__map{
+    @include headerMaps; 
+  }
+}
 
- /* présentation entreprise*/
+/* présentation entreprise*/
+.Apropos{
+@include apropos;
 
- .Apropos{
-    @include apropos;
-
-   h1{
-    padding: 15px 0px;
-    font-size: 1.5em;
-   }
-   p{
-    padding-bottom: 20px ;
-    font-size: 1.125em;
-   }
-   .Apropos__btn{
-    padding-bottom: 30px;
-   }
-
-   .Apropos__btn button{
+h1{
+@media #{$meduim-screen} {   
+font-size: 2em;
+}
+@media #{$large-screen} {   
+font-size: 2.5em;
+}
+}
+  &__btn{
+    @media #{$large-screen} {   
+    padding-bottom: 10px;
+  }
+    button{
       @include aproposBtn;
         &:hover {
-            background-color: lighten($clr-Primaire, 10%);
-            background-blend-mode: lighten;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+          background-color: lighten($clr-Primaire, 10%);
+          background-blend-mode: lighten;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         } 
     }
-    }
+  }
+}
+
 /****Fonctionnement*****/
 .functioning{ 
-  padding: 0px 10px 50px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
+  @include functioning;
   &__steps{
     display: flex;
     flex-direction: column;
     justify-content: center;
+  @media #{$meduim-screen} {   
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  @media #{$large-screen} {   
+    padding: 0px 0px;
+    flex-flow: nowrap;
+    flex-direction: row;
+  }
 
-    @media #{$meduim-screen} {
-      flex-wrap: wrap;
-      
-    }
-   
-   
     li{
+      @media #{$meduim-screen} {
+        width: 39%;
+      }
+      @media #{$large-screen} {
+        width: 100%;
+        padding:23px ;
+      }
       @include functioningList;
         &:hover{
-        background: $clr-gris-clair;
+          background: $clr-gris-clair;
         }
         &:hover .fas{
-        color:$clr-Primaire;
+          color:$clr-Primaire;
         }
-       }
-  @include functioningText;
-}
+    }
+      @include functioningText;
+  }
 }
 /****Restaurants*****/
-
-.new {
-  @include badge-card;
+.restaurant{
+  background: $clr-gris-clair;
+  h2{
+    @media #{$large-screen} {   
+      width: 95%;
+      margin: auto;
+    }
+  }
+  @media #{$meduim-screen} {   
+  padding: 0px 50px 0px 50px;
   }
 
-.like {
-  @include heart;
+  @media #{$large-screen} {   
+  padding: 0px 55px 20px 55px;
+  }
+  &__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+    padding-bottom:40px ;
+
+  @media #{$meduim-screen} {   
+    flex-flow: row wrap;
+    align-items: center;
+    padding-bottom:20px ;
+    justify-content: space-between;
+  }
+  }
 }
 .card {
-    @include card;
-}
-  .card img {
+  @include card;
+  img {
     @include card-img ;
   }
-  .restaurant{
-
-    background: $clr-gris-clair;
-    
-    &__section{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-bottom:40px ;
-    }
+  .new {
+    @include badge-card;
   }
  
-  .heart {
+  @media #{$meduim-screen} {
+    width: 40%;
+  }
+  @media #{$large-screen} {
+    width: 45%;
+  }
+  .info{
+    @include card-info;
+    .like {
+      @include heart;
+    }
+  }
+}
+
+/*******footer********/ 
+footer {
+  background-color: $clr-footer;
+  padding: 25px;
+  color:  $clr-white;
+  h3{
+    font-family: "Shrikhand", "sans-serif";
+    padding: 5px 0px 20px 0px;
+    font-size:1.2em;
+    font-style: italic;
+    font-weight: 400;
+  @media #{$meduim-screen} {   
+    padding: 0px;
+  }
+  @media #{$large-screen} {   
+    padding: 0px 0px 0px 50px;
+  }
+  }
+  @media #{$meduim-screen} {   
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
   }
-  .card {
-    .big{
-      @include card-big;
-    }
-  }
-
-  .card {
-    .info{
-      @include card-info;
-    }
-  }
-
-  .heart h3 {
-    font-size: 1.125rem;
-  }
-  .card p {
-    font-size: 1.063rem;
-    font-weight: 300;
-  }
-
-  /*******footer********/
-  
-footer {
-background-color: $clr-footer;
-padding: 25px;
-color:  $clr-white;
-}
-
-footer h3{
-  font-family: "Shrikhand", "sans-serif";
-  padding: 5px 0px 20px 0px;
-  font-size:1.2em;
-   font-style: italic;
-   font-weight: 400;
-}
-ul {
-  li {
-      padding: 5px 0 5px 0;
-      a {
-        color: $clr-white;
-        font-size: 1rem;
-       }
-    }
-}
-
-  .fa-utensils {
-    margin-right: 10px;
-  }
-  .fa-hands-helping {
-    margin-right: 4px;
-  }
-
-  /*******pages*****/
-  .imgMenu {
-    img{
-     @include imgMenu;
-    }
-  }
-  .menu-restaurant{
-   @include menu-restaurant;
-  }
-  .nom-menu{
-    h1{
-     font-style: italic;
-     font-weight: 400;
-    }
-   @include nom-menu;
-  }
-
-  .menu{
+  @media #{$large-screen} {   
     display: flex;
-    flex-direction:column;
-    justify-content: space-between;
-    }
-    
-  .plat {
-
-    h2{ 
-    padding: 0px;
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: 300; 
-   }
-
-   p{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-   }
-
-    @include plat-prix;
-
+    flex-direction: row-reverse;
+    padding: 35px 45px 15px 0px;
   }
-
-  .ligne{
-    width: 40px;
-    border: 2px solid $clr-Tertiaire;
-    margin: 7px 0px;
+  ul {
+    @include footer-list;
   }
+}
 
-  .repas{
-    background-color: $clr-white;
-    border-radius: 15px;
-    margin: 10px 0px;
-    padding: 10px;
-    height: 63px;
-    box-shadow: 4px 4px 6px  rgba(0, 0, 0, 0.25);
-    position: relative;
-    cursor: pointer;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    transition: padding-right 450ms ease-in-out;
-     &:hover {
-     padding-right: 80px;
-     .check {
-      opacity: 1;
-      transform: translate(-50px);
-       }
-     }
-   
-      &:hover .fa-circle-check {
-      // transform: rotate(360deg) ;
-       animation: rotate 500ms ease-in-out;
+/*******pages restaurant*****/
+.imgMenu {
+  img{
+    @include imgMenu;
+  }
+}
+.nom-menu{
+  h1{
+    font-style: italic;
+    font-weight: 400;
+  }
+  @include nom-menu;
+}
+
+.menu{
+  @include menu-restaurant;
+    &__restaurant{
+      display: flex;
+      flex-direction:column;
+      justify-content: space-between;
+      width: 90%;
+      margin: auto;
+      @media #{$large-screen} {   
+        width: 75%;
+        margin: auto;
       }
-   }
+    }
+}
 
-  .entrees{
-    animation: fadein 3s ease-in-out;
+.plat {
+  @include nom-plat;
+  @include plat-prix;
+  .check{
+    @include checked;
   }
-  .plats{
-    animation: fadein 6s ease-in-out;
+  .repas{
+    @include repas;
+    
+    &:hover {
+      padding-right: 80px;
+      .check {
+        opacity: 1;
+        transform: translate(-50px);
+      }
+    }
+    &:hover .fa-circle-check {
+      animation: rotate 500ms ease-in-out;
+    }
   }
+}
 
-  .desserts{
+.ligne{
+  width: 40px;
+  border: 2px solid $clr-Tertiaire;
+  margin: 7px 0px;
+}
+
+.entrees{
+  animation: fadein 3s ease-in-out;
+}
+.plats{
+  animation: fadein 6s ease-in-out;
+}
+.desserts{
   animation: fadein 9s ease-in-out;
-  }
+}
 
- .commande{
+ /**bouton**/
+.commande{
   display: flex;
   justify-content: center;
   background-color: $clr-gris-clair;
-  &__btn{
-   @include btn-commande; 
+
+  @media #{$large-screen} {   
+    padding: 0px 80px;
+    width: 75%;
+    margin: auto;
   }
- } 
-.check{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99E2D0;
-  width: 50px;
-  height: 63px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  position: absolute;
-  padding: 20px;
-  right: -50px;
-  top:0%;
-  opacity: 0;
-  transition: transform 330ms ease-in-out;
-  & .fa-circle-check{
-    color: $clr-white;
-    font-size: 30px;
-    // transition: transform 500ms ease-in-out;
+
+  @media #{$meduim-screen} {   
+    padding: 0px 80px;
+    width: 75%;
+    margin: auto;
   }
-   
-}
+    &__btn{
+      @include btn-commande; 
+    }
+} 

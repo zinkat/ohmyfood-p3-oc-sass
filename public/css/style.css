@@ -48,6 +48,23 @@ h1 {
   font-size: 1.7em;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  max-width: 1550px;
+}
+
+h2 {
+  padding: 50px 20px 10px 20px;
+}
+
+/****header****/
+/****fleche page resto***/
+/**** présentation entreprise*****/
+/*****Fonctionnement ****/
+/** Restaurants****/
+/*****footer***/
+/**style-pages restaurants*****/
 @keyframes fill {
   0% {
     opacity: 0;
@@ -80,6 +97,9 @@ h1 {
     opacity: 1;
   }
   50% {
+    opacity: 0.7;
+  }
+  80% {
     opacity: 0.5;
   }
   100% {
@@ -101,7 +121,7 @@ h1 {
     left: 60%;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    opacity: 1;
+    opacity: 0.5;
   }
   100% {
     left: 100%;
@@ -120,15 +140,9 @@ h1 {
     opacity: 0;
   }
 }
-body {
-  font-family: "Roboto", sans-serif;
-  /*display: flex;*/
-  justify-content: center;
-}
-
 .loader {
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  font-size: 3em;
+  font-size: 2.3em;
   font-family: Shrikhand, sans-serif;
   font-style: italic;
   font-weight: 400;
@@ -142,7 +156,19 @@ body {
   left: 0;
   right: 0;
   pointer-events: none;
-  animation: loader 1s ease-in-out 3s forwards;
+  animation: loader 4s cubic-bezier(0.39, 0.1, 0.53, 0.82) 4s forwards;
+}
+@media only screen and (min-width:768px) {
+  .loader {
+    font-size: 3.5em;
+    animation: loader 5s cubic-bezier(0.39, 0.1, 0.53, 0.82) 4s forwards;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .loader {
+    font-size: 4.5em;
+    animation: loader 6s cubic-bezier(0.39, 0.1, 0.53, 0.82) 4s forwards;
+  }
 }
 .loader__name span {
   position: absolute;
@@ -151,31 +177,123 @@ body {
   width: 100%;
   top: 40%;
   left: 20%;
-  padding-right: 1em;
+  padding-right: 0em;
+}
+@media only screen and (min-width:768px) {
+  .loader__name span {
+    margin-left: -350px;
+    padding-right: 1em;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .loader__name span {
+    margin-left: -500px;
+    padding-right: 1em;
+  }
 }
 .loader .loader__name span:nth-child(1) {
-  animation: move 2s linear infinite;
+  animation: move 2.5s linear infinite;
+}
+@media only screen and (min-width:768px) {
+  .loader .loader__name span:nth-child(1) {
+    animation: move 3s linear infinite;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .loader .loader__name span:nth-child(1) {
+    animation: move 4s linear infinite;
+  }
 }
 .loader .loader__name span:nth-child(2) {
-  animation: move 2s linear 0.2s infinite;
+  animation: move 2.5s linear 0.2s infinite;
+}
+@media only screen and (min-width:768px) {
+  .loader .loader__name span:nth-child(2) {
+    animation: move 3s linear 0.2s infinite;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .loader .loader__name span:nth-child(2) {
+    animation: move 4s linear 0.2s infinite;
+  }
 }
 .loader .loader__name span:nth-child(3) {
-  animation: move 2s linear 0.4s infinite;
+  animation: move 2.5s linear 0.4s infinite;
+}
+@media only screen and (min-width:768px) {
+  .loader .loader__name span:nth-child(3) {
+    animation: move 3s linear 0.4s infinite;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .loader .loader__name span:nth-child(3) {
+    animation: move 4s linear 0.4s infinite;
+  }
 }
 .loader .loader__name span:nth-child(4) {
-  animation: move 2s linear 0.6s infinite;
+  animation: move 2.5s linear 0.6s infinite;
+}
+@media only screen and (min-width:768px) {
+  .loader .loader__name span:nth-child(4) {
+    animation: move 3s linear 0.6s infinite;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .loader .loader__name span:nth-child(4) {
+    animation: move 4s linear 0.6s infinite;
+  }
 }
 .loader .loader__name span:nth-child(5) {
-  animation: move 2s linear 0.8s infinite;
+  animation: move 2.5s linear 0.8s infinite;
+}
+@media only screen and (min-width:768px) {
+  .loader .loader__name span:nth-child(5) {
+    animation: move 3s linear 0.8s infinite;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .loader .loader__name span:nth-child(5) {
+    animation: move 4s linear 0.8s infinite;
+  }
 }
 .loader .loader__name span:nth-child(6) {
-  animation: move 2s linear 1s infinite;
+  animation: move 2.5s linear 1s infinite;
+}
+@media only screen and (min-width:768px) {
+  .loader .loader__name span:nth-child(6) {
+    animation: move 3s linear 1s infinite;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .loader .loader__name span:nth-child(6) {
+    animation: move 4s linear 1s infinite;
+  }
 }
 .loader .loader__name span:nth-child(7) {
-  animation: move 2s linear 1.2s infinite;
+  animation: move 2.5s linear 1.2s infinite;
+}
+@media only screen and (min-width:768px) {
+  .loader .loader__name span:nth-child(7) {
+    animation: move 3s linear 1.2s infinite;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .loader .loader__name span:nth-child(7) {
+    animation: move 4s linear 1.2s infinite;
+  }
 }
 .loader .loader__name span:nth-child(8) {
-  animation: move 2s linear 1.4s infinite;
+  animation: move 2.5s linear 1.4s infinite;
+}
+@media only screen and (min-width:768px) {
+  .loader .loader__name span:nth-child(8) {
+    animation: move 3s linear 1.4s infinite;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .loader .loader__name span:nth-child(8) {
+    animation: move 4s linear 1.4s infinite;
+  }
 }
 .loader__utensils {
   vertical-align: middle;
@@ -185,17 +303,12 @@ body {
   animation: turn 2s cubic-bezier(0.32, 0.1, 0.64, 0.86) infinite;
 }
 
-h2 {
-  padding: 50px 20px 10px 20px;
-}
-
-.header {
-  text-align: center;
-  width: 100%;
-}
+/**** header***/
 .header__logo {
   height: 70px;
   padding-top: 10px;
+  text-align: center;
+  width: 100%;
 }
 .header__logo img {
   height: 50px;
@@ -204,12 +317,13 @@ h2 {
 .header .arrow {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .header .arrow__fleche {
   position: absolute;
   font-size: 20px;
   left: 3%;
-  top: 3.5%;
+  top: 30%;
 }
 .header__map {
   display: flex;
@@ -250,10 +364,25 @@ h2 {
   padding-bottom: 20px;
   font-size: 1.125em;
 }
-.Apropos .Apropos__btn {
+.Apropos__btn {
   padding-bottom: 30px;
 }
-.Apropos .Apropos__btn button {
+@media only screen and (min-width:768px) {
+  .Apropos h1 {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .Apropos h1 {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .Apropos__btn {
+    padding-bottom: 10px;
+  }
+}
+.Apropos__btn button {
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border: 1px solid transparent;
   border-radius: 30px;
@@ -267,7 +396,7 @@ h2 {
   line-height: 19px;
   cursor: pointer;
 }
-.Apropos .Apropos__btn button:hover {
+.Apropos__btn button:hover {
   background-color: #ae80e5;
   background-blend-mode: lighten;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -275,10 +404,22 @@ h2 {
 
 /****Fonctionnement*****/
 .functioning {
-  padding: 0px 10px 50px 10px;
+  padding: 0px 0px 50px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 95%;
+  margin: auto;
+}
+@media only screen and (min-width:768px) {
+  .functioning {
+    padding: 0px 50px 20px 50px;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .functioning {
+    padding: 0px 55px 20px 55px;
+  }
 }
 .functioning__steps {
   display: flex;
@@ -287,7 +428,16 @@ h2 {
 }
 @media only screen and (min-width:768px) {
   .functioning__steps {
-    flex-wrap: wrap;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .functioning__steps {
+    padding: 0px 0px;
+    flex-flow: nowrap;
+    flex-direction: row;
   }
 }
 .functioning__steps li {
@@ -296,13 +446,24 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 35px 25px;
+  padding: 35px 17px;
   margin: 15px;
   border-radius: 20px;
   box-shadow: 1px 2px 8px 2px #c4c4c4;
   background-color: #F7F7F7;
   font-weight: 500;
   margin-left: 20px;
+}
+@media only screen and (min-width:768px) {
+  .functioning__steps li {
+    width: 39%;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .functioning__steps li {
+    width: 100%;
+    padding: 23px;
+  }
 }
 .functioning__steps li:hover {
   background: #F7F7F7;
@@ -313,23 +474,95 @@ h2 {
 .functioning__steps p {
   font-weight: 500;
   margin-left: 20px;
+  font-size: 0.99em;
+}
+@media only screen and (min-width:1024px) {
+  .functioning__steps p {
+    margin-left: 10px;
+  }
+}
+@media only screen and (min-width:768px) {
+  .functioning__steps p {
+    margin-left: 10px;
+  }
 }
 .functioning__steps--number {
   background-color: #9356DC;
   color: white;
   border-radius: 50%;
   padding: 5px 9px;
-  margin-left: -40px;
+  margin-left: -33px;
+}
+@media only screen and (min-width:768px) {
+  .functioning__steps--number {
+    margin-left: -35px;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .functioning__steps--number {
+    margin-left: -39px;
+  }
 }
 .functioning__steps--icon {
   color: #7E7E7E;
   font-size: 1.2rem;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 /****Restaurants*****/
-.new {
-  width: 20%;
+.restaurant {
+  background: #F7F7F7;
+}
+@media only screen and (min-width:1024px) {
+  .restaurant h2 {
+    width: 95%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width:768px) {
+  .restaurant {
+    padding: 0px 50px 0px 50px;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .restaurant {
+    padding: 0px 55px 20px 55px;
+  }
+}
+.restaurant__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+@media only screen and (min-width:768px) {
+  .restaurant__section {
+    flex-flow: row wrap;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-between;
+  }
+}
+
+.card {
+  border-radius: 25px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  position: relative;
+  background: white;
+}
+.card img {
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+  height: 100%;
+  max-height: 180px;
+}
+.card .new {
+  width: 23%;
   height: 29px;
   background: rgb(152, 226, 207);
   font-size: 0.9rem;
@@ -342,13 +575,38 @@ h2 {
   right: 2%;
   top: 5%;
 }
-
-.like {
+@media only screen and (min-width:768px) {
+  .card {
+    width: 40%;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .card {
+    width: 45%;
+  }
+}
+.card .info {
+  margin: 0;
+  padding: 15px;
+}
+.card .info .heart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .info .heart h3 {
+  font-size: 1.125rem;
+}
+.card .info .heart p {
+  font-size: 1.063rem;
+  font-weight: 300;
+}
+.card .info .like {
   color: black;
   font-size: 25px;
   cursor: pointer;
 }
-.like:hover {
+.card .info .like:hover {
   animation: fill 0.3s ease-in-out;
   display: inline-block;
   opacity: 1;
@@ -359,64 +617,12 @@ h2 {
   font-weight: bold;
 }
 
-.card {
-  border-radius: 25px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  position: relative;
-  background: white;
-}
-
-.card img {
-  object-fit: cover;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  width: 100%;
-  height: 100%;
-  max-height: 220px;
-}
-
-.restaurant {
-  background: #F7F7F7;
-}
-.restaurant__section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 40px;
-}
-
-.heart {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card .big {
-  margin: 0;
-}
-
-.card .info {
-  margin: 0;
-  padding: 15px;
-}
-
-.heart h3 {
-  font-size: 1.125rem;
-}
-
-.card p {
-  font-size: 1.063rem;
-  font-weight: 300;
-}
-
 /*******footer********/
 footer {
   background-color: #353535;
   padding: 25px;
   color: white;
 }
-
 footer h3 {
   font-family: "Shrikhand", "sans-serif";
   padding: 5px 0px 20px 0px;
@@ -424,31 +630,126 @@ footer h3 {
   font-style: italic;
   font-weight: 400;
 }
-
-ul li {
+@media only screen and (min-width:768px) {
+  footer h3 {
+    padding: 0px;
+  }
+}
+@media only screen and (min-width:1024px) {
+  footer h3 {
+    padding: 0px 0px 0px 50px;
+  }
+}
+@media only screen and (min-width:768px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (min-width:1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 35px 45px 15px 0px;
+  }
+}
+footer ul {
+  width: 90%;
+}
+@media only screen and (min-width:768px) {
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (min-width:1024px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+  footer ul li:nth-child(3) {
+    padding-left: 35px;
+  }
+}
+footer ul li {
   padding: 5px 0 5px 0;
 }
-ul li a {
+footer ul li a {
   color: white;
   font-size: 1rem;
 }
-
-.fa-utensils {
+footer ul li a .fa-utensils {
   margin-right: 10px;
 }
-
-.fa-hands-helping {
+footer ul li a .fa-hands-helping {
   margin-right: 4px;
 }
 
-/*******pages*****/
+/*******pages restaurant*****/
 .imgMenu img {
   object-fit: cover;
   width: 100%;
   height: 250px;
 }
+@media only screen and (min-width:768px) {
+  .imgMenu img {
+    width: 100%;
+    height: 350px;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .imgMenu img {
+    width: 100%;
+    height: 350px;
+  }
+}
 
-.menu-restaurant {
+.nom-menu {
+  font-family: Shrikhand, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px 10px 0px;
+  width: 90%;
+  margin: auto;
+}
+.nom-menu h1 {
+  font-style: italic;
+  font-weight: 400;
+}
+@media only screen and (min-width:768px) {
+  .nom-menu {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .nom-menu {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+.nom-menu .like {
+  color: black;
+  font-size: 25px;
+  cursor: pointer;
+}
+.nom-menu .like:hover {
+  animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  background-clip: "text";
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.menu {
   background-color: #F7F7F7;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
@@ -460,23 +761,34 @@ ul li a {
   position: relative;
   margin-top: -50px;
 }
-
-.nom-menu {
-  font-family: Shrikhand, sans-serif;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 0px 10px 0px;
+@media only screen and (min-width:768px) {
+  .menu {
+    padding: 0px 80px;
+    width: 75%;
+    margin: auto;
+    margin-top: -30px;
+  }
 }
-.nom-menu h1 {
-  font-style: italic;
-  font-weight: 400;
+@media only screen and (min-width:1024px) {
+  .menu {
+    padding: 0px 80px;
+    width: 75%;
+    margin: auto;
+    margin-top: -30px;
+  }
 }
-
-.menu {
+.menu__restaurant {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+@media only screen and (min-width:1024px) {
+  .menu__restaurant {
+    width: 75%;
+    margin: auto;
+  }
 }
 
 .plat {
@@ -500,14 +812,27 @@ ul li a {
   align-items: center;
   line-height: 1.5em;
 }
-
-.ligne {
-  width: 40px;
-  border: 2px solid rgb(152, 226, 207);
-  margin: 7px 0px;
+.plat .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 63px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top: 0%;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
 }
-
-.repas {
+.plat .check .fa-circle-check {
+  color: white;
+  font-size: 30px;
+}
+.plat .repas {
   background-color: white;
   border-radius: 15px;
   margin: 10px 0px;
@@ -521,15 +846,21 @@ ul li a {
   overflow: hidden;
   transition: padding-right 450ms ease-in-out;
 }
-.repas:hover {
+.plat .repas:hover {
   padding-right: 80px;
 }
-.repas:hover .check {
+.plat .repas:hover .check {
   opacity: 1;
   transform: translate(-50px);
 }
-.repas:hover .fa-circle-check {
+.plat .repas:hover .fa-circle-check {
   animation: rotate 500ms ease-in-out;
+}
+
+.ligne {
+  width: 40px;
+  border: 2px solid rgb(152, 226, 207);
+  margin: 7px 0px;
 }
 
 .entrees {
@@ -544,10 +875,25 @@ ul li a {
   animation: fadein 9s ease-in-out;
 }
 
+/**bouton**/
 .commande {
   display: flex;
   justify-content: center;
   background-color: #F7F7F7;
+}
+@media only screen and (min-width:1024px) {
+  .commande {
+    padding: 0px 80px;
+    width: 75%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width:768px) {
+  .commande {
+    padding: 0px 80px;
+    width: 75%;
+    margin: auto;
+  }
 }
 .commande__btn {
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -565,31 +911,20 @@ ul li a {
   padding: 15px 0px;
   width: 55%;
 }
+@media only screen and (min-width:768px) {
+  .commande__btn {
+    width: 35%;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .commande__btn {
+    width: 28%;
+  }
+}
 .commande__btn:hover {
   background-color: #ae80e5;
   background-blend-mode: lighten;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99E2D0;
-  width: 50px;
-  height: 63px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  position: absolute;
-  padding: 20px;
-  right: -50px;
-  top: 0%;
-  opacity: 0;
-  transition: transform 330ms ease-in-out;
-}
-.check .fa-circle-check {
-  color: white;
-  font-size: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
