@@ -44,27 +44,16 @@ a {
   color: black;
 }
 
-h1 {
-  font-size: 1.7em;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   margin: auto;
-  max-width: 1550px;
+  max-width: 1440px;
 }
 
 h2 {
   padding: 50px 20px 10px 20px;
 }
 
-/****header****/
-/****fleche page resto***/
-/**** présentation entreprise*****/
-/*****Fonctionnement ****/
-/** Restaurants****/
-/*****footer***/
-/**style-pages restaurants*****/
 @keyframes fill {
   0% {
     opacity: 0;
@@ -87,9 +76,11 @@ h2 {
 @keyframes rotate {
   from {
     -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes loader {
@@ -133,10 +124,12 @@ h2 {
 @keyframes turn {
   from {
     -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
     opacity: 1;
   }
   to {
     -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
     opacity: 0;
   }
 }
@@ -419,6 +412,8 @@ h2 {
 @media only screen and (min-width:1024px) {
   .functioning {
     padding: 0px 55px 20px 55px;
+    width: 90%;
+    margin: auto;
   }
 }
 .functioning__steps {
@@ -446,7 +441,7 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 35px 17px;
+  padding: 25px 17px;
   margin: 15px;
   border-radius: 20px;
   box-shadow: 1px 2px 8px 2px #c4c4c4;
@@ -461,8 +456,7 @@ h2 {
 }
 @media only screen and (min-width:1024px) {
   .functioning__steps li {
-    width: 100%;
-    padding: 23px;
+    padding: 25px 0px;
   }
 }
 .functioning__steps li:hover {
@@ -500,7 +494,7 @@ h2 {
 }
 @media only screen and (min-width:1024px) {
   .functioning__steps--number {
-    margin-left: -39px;
+    margin-left: -15px;
   }
 }
 .functioning__steps--icon {
@@ -513,9 +507,15 @@ h2 {
 .restaurant {
   background: #F7F7F7;
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width:768px) {
   .restaurant h2 {
     width: 95%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .restaurant h2 {
+    width: 90%;
     margin: auto;
   }
 }
@@ -542,7 +542,17 @@ h2 {
     flex-flow: row wrap;
     align-items: center;
     padding-bottom: 20px;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .restaurant__section {
+    flex-flow: row wrap;
+    align-items: center;
+    padding-bottom: 20px;
     justify-content: space-between;
+    width: 90%;
+    margin: auto;
   }
 }
 
@@ -582,7 +592,7 @@ h2 {
 }
 @media only screen and (min-width:1024px) {
   .card {
-    width: 45%;
+    width: 40%;
   }
 }
 .card .info {
@@ -612,7 +622,7 @@ h2 {
   opacity: 1;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
-  background-clip: "text";
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -720,6 +730,12 @@ footer ul li a .fa-hands-helping {
 .nom-menu h1 {
   font-style: italic;
   font-weight: 400;
+  font-size: 1.5em;
+}
+@media only screen and (min-width:768px) {
+  .nom-menu h1 {
+    font-size: 1.75em;
+  }
 }
 @media only screen and (min-width:768px) {
   .nom-menu {
@@ -744,7 +760,7 @@ footer ul li a .fa-hands-helping {
   opacity: 1;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
-  background-clip: "text";
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }

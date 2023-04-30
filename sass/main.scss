@@ -65,12 +65,13 @@ font-size: 2.5em;
   }
 
     li{
+
       @media #{$meduim-screen} {
         width: 39%;
       }
       @media #{$large-screen} {
-        width: 100%;
-        padding:23px ;
+  
+        padding: 25px 0px ;
       }
       @include functioningList;
         &:hover{
@@ -86,11 +87,17 @@ font-size: 2.5em;
 /****Restaurants*****/
 .restaurant{
   background: $clr-gris-clair;
+
   h2{
-    @media #{$large-screen} {   
+    @media #{$meduim-screen} {   
       width: 95%;
       margin: auto;
     }
+    @media #{$large-screen} {   
+      width: 90%;
+      margin: auto;
+    }
+  
   }
   @media #{$meduim-screen} {   
   padding: 0px 50px 0px 50px;
@@ -111,7 +118,16 @@ font-size: 2.5em;
     flex-flow: row wrap;
     align-items: center;
     padding-bottom:20px ;
-    justify-content: space-between;
+    justify-content: center;
+  }
+  @media #{$large-screen} {   
+    flex-flow: row wrap;
+    align-items: center;
+    padding-bottom:20px ;
+    justify-content:space-between;
+    width: 90%;
+    margin: auto;
+    
   }
   }
 }
@@ -128,7 +144,7 @@ font-size: 2.5em;
     width: 40%;
   }
   @media #{$large-screen} {
-    width: 45%;
+    width: 40%;
   }
   .info{
     @include card-info;
@@ -181,6 +197,10 @@ footer {
   h1{
     font-style: italic;
     font-weight: 400;
+    font-size: 1.5em;
+    @media #{$meduim-screen} {   
+      font-size: 1.75em;
+    }
   }
   @include nom-menu;
 }

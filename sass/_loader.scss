@@ -1,4 +1,3 @@
-
 .loader{
   background-image: $linear-gradient;
   font-size: 2.3em;
@@ -23,7 +22,7 @@
   }
   @media #{$large-screen} {   
     font-size: 4.5em;
-    animation:loader 6s cubic-bezier(.39,.1,.53,.82) 4s  forwards;
+    animation:loader 6s cubic-bezier(.39,.1,.53,.82) 4s forwards;
   }
     &__name span{
       position: absolute;

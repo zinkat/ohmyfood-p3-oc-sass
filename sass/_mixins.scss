@@ -1,4 +1,4 @@
-/****header****/
+///header
 @mixin headerLogo{
   height: 70px;
   padding-top: 10px;
@@ -11,7 +11,7 @@
   }
 }
 
-/****fleche page resto***/
+///fleche page resto
 @mixin header-page{
 .arrow{
   display: flex;
@@ -47,7 +47,7 @@
   }   
 }
 
- /**** présentation entreprise*****/
+ ///présentation entreprise
 @mixin apropos{
   text-align: center;
   width: 100%;
@@ -85,7 +85,7 @@
   cursor: pointer;
 }
 
-/*****Fonctionnement ****/
+///Fonctionnement
 @mixin functioning{
   padding: 0px 0px 50px 0px;
   display: flex;
@@ -100,6 +100,8 @@
  
    @media #{$large-screen} {   
     padding: 0px 55px 20px 55px;
+    width: 90%;
+    margin: auto;
   }
 }
 
@@ -109,7 +111,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  padding:  35px 17px;
+  padding:  25px 17px;
   margin: 15px;;
   border-radius: 20px;
   box-shadow: 1px 2px 8px 2px #c4c4c4;
@@ -140,7 +142,7 @@
         margin-left: -35px;
       }
       @media #{$large-screen} {
-        margin-left: -39px;
+        margin-left: -15px;
       }
     }
     &--icon{
@@ -150,7 +152,7 @@
     }    
 }
 
-/** Restaurants****/
+///Restaurants
 @mixin card {
   border-radius: 25px;
   box-shadow:0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -210,13 +212,13 @@
     opacity: 1;
     background:$linear-gradient;
     -webkit-background-clip:text;
-    background-clip: "text";
+    background-clip: text;
     -webkit-text-fill-color:transparent;
     font-weight: bold;
   }
 }
 
-/*****footer***/
+///footer
 @mixin footer-list{
   width: 90%;
 @media #{$meduim-screen} {   
@@ -248,7 +250,7 @@
   }
 }
 
-/**style-pages restaurants*****/
+///style-pages restaurants
 @mixin imgMenu{
   object-fit: cover;
   width: 100%;
@@ -270,6 +272,7 @@
   padding: 30px 0px 10px 0px;
   width: 90%;
   margin: auto;
+  
 
   @media #{$meduim-screen} {   
     justify-content: center;
