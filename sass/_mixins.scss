@@ -8,6 +8,7 @@
   img{
     height: 50px;
     width: 180px;
+
   }
 }
 
@@ -20,7 +21,7 @@
     &__fleche{
       position: absolute;
       font-size: 20px;
-      left: 3%;
+      left: 2%;
       top: 30%;
     }
   }
@@ -59,6 +60,7 @@
   h1{
     padding: 15px 0px;
     font-size: 1.5em;
+
   }
   p{
     padding-bottom: 20px ;
@@ -94,6 +96,7 @@
   width: 95%;
   margin: auto;
 
+
   @media #{$meduim-screen} {   
     padding: 0px 50px 20px 50px;
   }
@@ -102,6 +105,7 @@
     padding: 0px 55px 20px 55px;
     width: 90%;
     margin: auto;
+  
   }
 }
 
@@ -203,7 +207,6 @@
 }
 
 @mixin heart{
-  color: black;
   font-size: 25px;
   cursor: pointer;
   &:hover {
@@ -213,7 +216,7 @@
     background:$linear-gradient;
     -webkit-background-clip:text;
     background-clip: text;
-    -webkit-text-fill-color:transparent;
+    color: transparent ;
     font-weight: bold;
   }
 }
@@ -272,16 +275,19 @@
   padding: 30px 0px 10px 0px;
   width: 90%;
   margin: auto;
+
   
 
   @media #{$meduim-screen} {   
     justify-content: center;
     gap: 30px;
+  
   }
 
   @media #{$large-screen} {   
     justify-content: center;
     gap: 30px;
+    max-width: 1440px;
   }
   .like {
     @include heart;
@@ -299,12 +305,12 @@
   padding: 0px 15px;
   position: relative;
   margin-top: -50px;
-
+ 
   @media #{$meduim-screen} {   
     padding: 0px 80px;
     width: 75%;
     margin: auto;
-    margin-top: -30px;
+    margin-top: -30px;  
   }
 
   @media #{$large-screen} {   
@@ -312,6 +318,9 @@
     width: 75%;
     margin: auto;
     margin-top: -30px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @mixin nom-plat{
@@ -390,6 +399,7 @@
   margin: 30px 0;
   padding: 15px 0px;
   width: 55%;
+
   @media #{$meduim-screen} {   
     width: 35%;
   }

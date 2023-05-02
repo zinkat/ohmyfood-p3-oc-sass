@@ -46,8 +46,6 @@ a {
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: auto;
-  max-width: 1440px;
 }
 
 h2 {
@@ -75,11 +73,9 @@ h2 {
 }
 @keyframes rotate {
   from {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -104,31 +100,26 @@ h2 {
   }
   35% {
     left: 40%;
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     opacity: 1;
   }
   65% {
     left: 60%;
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     opacity: 0.5;
   }
   100% {
     left: 100%;
-    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     opacity: 0;
   }
 }
 @keyframes turn {
   from {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     opacity: 1;
   }
   to {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
     opacity: 0;
   }
@@ -315,7 +306,7 @@ h2 {
 .header .arrow__fleche {
   position: absolute;
   font-size: 20px;
-  left: 3%;
+  left: 2%;
   top: 30%;
 }
 .header__map {
@@ -396,6 +387,12 @@ h2 {
 }
 
 /****Fonctionnement*****/
+.max {
+  display: flex;
+  max-width: 1440px;
+  margin: auto;
+}
+
 .functioning {
   padding: 0px 0px 50px 0px;
   display: flex;
@@ -459,9 +456,6 @@ h2 {
     padding: 25px 0px;
   }
 }
-.functioning__steps li:hover {
-  background: #F7F7F7;
-}
 .functioning__steps li:hover .fas {
   color: #9356DC;
 }
@@ -504,8 +498,13 @@ h2 {
 }
 
 /****Restaurants*****/
-.restaurant {
+.bg {
   background: #F7F7F7;
+}
+
+.restaurant {
+  max-width: 1440px;
+  margin: auto;
 }
 @media only screen and (min-width:768px) {
   .restaurant h2 {
@@ -516,7 +515,6 @@ h2 {
 @media only screen and (min-width:1024px) {
   .restaurant h2 {
     width: 90%;
-    margin: auto;
   }
 }
 @media only screen and (min-width:768px) {
@@ -612,7 +610,6 @@ h2 {
   font-weight: 300;
 }
 .card .info .like {
-  color: black;
   font-size: 25px;
   cursor: pointer;
 }
@@ -623,7 +620,7 @@ h2 {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   font-weight: bold;
 }
 
@@ -747,10 +744,10 @@ footer ul li a .fa-hands-helping {
   .nom-menu {
     justify-content: center;
     gap: 30px;
+    max-width: 1440px;
   }
 }
 .nom-menu .like {
-  color: black;
   font-size: 25px;
   cursor: pointer;
 }
@@ -761,7 +758,7 @@ footer ul li a .fa-hands-helping {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   font-weight: bold;
 }
 
@@ -791,6 +788,9 @@ footer ul li a .fa-hands-helping {
     width: 75%;
     margin: auto;
     margin-top: -30px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .menu__restaurant {
@@ -897,14 +897,14 @@ footer ul li a .fa-hands-helping {
   justify-content: center;
   background-color: #F7F7F7;
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width:768px) {
   .commande {
     padding: 0px 80px;
     width: 75%;
     margin: auto;
   }
 }
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1024px) {
   .commande {
     padding: 0px 80px;
     width: 75%;

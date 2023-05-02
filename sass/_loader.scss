@@ -32,10 +32,6 @@
       top: 40%;
       left: 20%;
       padding-right: 0em;
-      // transform: rotate(180deg);
-      // -webkit-transform:rotate(180deg);
-      //animation:move 2s linear  infinite;
-      //-webkit-animation:move 2s linear infinite;
       @media #{$meduim-screen} {   
         margin-left: -350px; 
         padding-right: 1em;
@@ -47,8 +43,6 @@
       }
     }
   .loader__name span:nth-child(1) {
-    // animation-delay:0s;
-    // -webkit-animation-delay:0s;
       animation:move 2.5s linear  infinite;
     @media #{$meduim-screen} {   
       animation:move 3s linear  infinite;
@@ -130,5 +124,4 @@
     left: 45%;
     animation: turn 2s cubic-bezier(0.32, 0.1, 0.64, 0.86)  infinite;
   }
-
 }

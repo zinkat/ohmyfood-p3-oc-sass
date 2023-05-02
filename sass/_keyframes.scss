@@ -24,11 +24,11 @@
 //hover check
 @keyframes rotate {
   from{
-    -webkit-transform: rotate(0deg);
+
      transform: rotate(0deg);
   }
   to{
-    -webkit-transform: rotate(360deg);
+
      transform: rotate(360deg);
   }
 }
@@ -53,26 +53,22 @@
 @keyframes move {
   0% {
     left:0;
-    // -webkit-transform:rotate(-180deg); 
     // transform:rotate(-180deg);
     opacity:0.5;
   }
   35% {
     left: 40%; 
-    -webkit-transform:rotate(0deg);
     transform:rotate(0deg);
     opacity:1;
   }
    65% {
     left:60%; 
-    -webkit-transform:rotate(0deg); 
     transform:rotate(0deg); 
     opacity:0.5;
   }
 
   100% {
     left:100%; 
-    -webkit-transform:rotate(180deg); 
     transform:rotate(180deg);
     opacity:0;
   }
@@ -80,12 +76,10 @@
 
 @keyframes turn{
   from{
-    -webkit-transform: rotate(0deg);
     transform:rotate(0deg);
     opacity: 1;
   }
   to{
-    -webkit-transform: rotate(360deg);
     transform:rotate(360deg);
     opacity: 0;
   }

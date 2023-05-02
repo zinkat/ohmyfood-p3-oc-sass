@@ -10,12 +10,14 @@
 
   &__logo{
     @include headerLogo;
+
   }
 
   @include  header-page;
 
   &__map{
     @include headerMaps; 
+  
   }
 }
 
@@ -47,12 +49,19 @@ font-size: 2.5em;
 }
 
 /****Fonctionnement*****/
+.max{ 
+  display: flex;      
+  max-width: 1440px;
+  margin: auto;
+ }
+
 .functioning{ 
   @include functioning;
   &__steps{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
   @media #{$meduim-screen} {   
     width: 100%;
     flex-flow: row wrap;
@@ -62,8 +71,8 @@ font-size: 2.5em;
     padding: 0px 0px;
     flex-flow: nowrap;
     flex-direction: row;
+  
   }
-
     li{
 
       @media #{$meduim-screen} {
@@ -72,11 +81,10 @@ font-size: 2.5em;
       @media #{$large-screen} {
   
         padding: 25px 0px ;
+        
       }
       @include functioningList;
-        &:hover{
-          background: $clr-gris-clair;
-        }
+    
         &:hover .fas{
           color:$clr-Primaire;
         }
@@ -85,9 +93,12 @@ font-size: 2.5em;
   }
 }
 /****Restaurants*****/
-.restaurant{
+.bg{
   background: $clr-gris-clair;
-
+}
+.restaurant{
+  max-width: 1440px;
+  margin: auto;
   h2{
     @media #{$meduim-screen} {   
       width: 95%;
@@ -95,7 +106,8 @@ font-size: 2.5em;
     }
     @media #{$large-screen} {   
       width: 90%;
-      margin: auto;
+
+ 
     }
   
   }
@@ -111,8 +123,8 @@ font-size: 2.5em;
     flex-direction: column;
     justify-content: center;
     width: 95%;
-    margin: auto;
-    padding-bottom:40px ;
+    margin: auto;  
+    padding-bottom:40px;
 
   @media #{$meduim-screen} {   
     flex-flow: row wrap;
@@ -127,6 +139,7 @@ font-size: 2.5em;
     justify-content:space-between;
     width: 90%;
     margin: auto;
+  
     
   }
   }
@@ -184,6 +197,7 @@ footer {
   }
   ul {
     @include footer-list;
+    
   }
 }
 
@@ -191,6 +205,7 @@ footer {
 .imgMenu {
   img{
     @include imgMenu;
+    
   }
 }
 .nom-menu{
@@ -203,26 +218,32 @@ footer {
     }
   }
   @include nom-menu;
+
+
+
 }
 
 .menu{
+
   @include menu-restaurant;
+
     &__restaurant{
       display: flex;
       flex-direction:column;
       justify-content: space-between;
       width: 90%;
-      margin: auto;
+      margin: auto;   
       @media #{$large-screen} {   
         width: 75%;
         margin: auto;
-      }
+      }  
     }
 }
 
 .plat {
   @include nom-plat;
   @include plat-prix;
+
   .check{
     @include checked;
   }
@@ -264,16 +285,17 @@ footer {
   justify-content: center;
   background-color: $clr-gris-clair;
 
-  @media #{$large-screen} {   
-    padding: 0px 80px;
-    width: 75%;
-    margin: auto;
-  }
-
   @media #{$meduim-screen} {   
     padding: 0px 80px;
     width: 75%;
     margin: auto;
+  }
+  
+  @media #{$large-screen} {   
+    padding: 0px 80px;
+    width: 75%;
+    margin: auto;
+    
   }
     &__btn{
       @include btn-commande; 
