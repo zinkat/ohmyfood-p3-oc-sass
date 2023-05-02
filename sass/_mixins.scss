@@ -394,17 +394,19 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.25);;
+  box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.25);
   cursor: pointer;
   margin: 30px 0;
   padding: 15px 0px;
   width: 55%;
+ 
 
   @media #{$meduim-screen} {   
     width: 35%;
   }
   @media #{$large-screen} {   
     width: 28%;
+    max-width: 1440px;
   }
     &:hover {
       background-color: lighten($clr-Primaire, 10%);

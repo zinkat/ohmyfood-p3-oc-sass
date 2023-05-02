@@ -636,6 +636,7 @@ footer h3 {
   font-size: 1.2em;
   font-style: italic;
   font-weight: 400;
+  max-width: 1440px;
 }
 @media only screen and (min-width:768px) {
   footer h3 {
@@ -662,6 +663,7 @@ footer h3 {
   }
 }
 footer ul {
+  max-width: 1440px;
   width: 90%;
 }
 @media only screen and (min-width:768px) {
@@ -804,6 +806,7 @@ footer ul li a .fa-hands-helping {
   .menu__restaurant {
     width: 75%;
     margin: auto;
+    max-width: 1440px;
   }
 }
 
@@ -909,6 +912,7 @@ footer ul li a .fa-hands-helping {
     padding: 0px 80px;
     width: 75%;
     margin: auto;
+    max-width: 1440px;
   }
 }
 .commande__btn {
@@ -935,6 +939,7 @@ footer ul li a .fa-hands-helping {
 @media only screen and (min-width:1024px) {
   .commande__btn {
     width: 28%;
+    max-width: 1440px;
   }
 }
 .commande__btn:hover {

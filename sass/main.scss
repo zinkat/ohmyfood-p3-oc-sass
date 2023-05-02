@@ -178,6 +178,7 @@ footer {
     font-size:1.2em;
     font-style: italic;
     font-weight: 400;
+    max-width: 1440px;
   @media #{$meduim-screen} {   
     padding: 0px;
   }
@@ -196,6 +197,7 @@ footer {
     padding: 35px 45px 15px 0px;
   }
   ul {
+    max-width: 1440px;
     @include footer-list;
     
   }
@@ -236,6 +238,7 @@ footer {
       @media #{$large-screen} {   
         width: 75%;
         margin: auto;
+        max-width: 1440px;
       }  
     }
 }
@@ -243,6 +246,7 @@ footer {
 .plat {
   @include nom-plat;
   @include plat-prix;
+
 
   .check{
     @include checked;
@@ -285,6 +289,7 @@ footer {
   justify-content: center;
   background-color: $clr-gris-clair;
 
+
   @media #{$meduim-screen} {   
     padding: 0px 80px;
     width: 75%;
@@ -295,6 +300,7 @@ footer {
     padding: 0px 80px;
     width: 75%;
     margin: auto;
+    max-width: 1440px;
     
   }
     &__btn{
