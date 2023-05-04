@@ -273,7 +273,7 @@
   }
 }
 @mixin nom-menu {
-  font-family: Shrikhand, sans-serif;
+  font-family: $font-cursive;
   display: flex;
   justify-content: space-between;
   align-items: center;
