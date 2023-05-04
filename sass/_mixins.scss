@@ -59,7 +59,13 @@
   background-color: $clr-gris-clair;
   h1{
     padding: 15px 0px;
-    font-size: 1.5em;
+    font-size: 1.6em;
+    @media #{$meduim-screen} {   
+      font-size: 2em;
+      }
+      @media #{$large-screen} {   
+      font-size: 2.3em;
+      }
 
   }
   p{
@@ -210,14 +216,13 @@
   font-size: 25px;
   cursor: pointer;
   &:hover {
-    animation: fill 0.3s ease-in-out;
     display: inline-block;
-    opacity: 1;
     background:$linear-gradient;
     -webkit-background-clip:text;
     background-clip: text;
     color: transparent ;
     font-weight: bold;
+    animation: fill 0.3s ease-in-out;
   }
 }
 
@@ -276,8 +281,6 @@
   width: 90%;
   margin: auto;
 
-  
-
   @media #{$meduim-screen} {   
     justify-content: center;
     gap: 30px;
@@ -316,7 +319,6 @@
   @media #{$large-screen} {   
     padding: 0px 80px;
     width: 75%;
-    margin: auto;
     margin-top: -30px;
     max-width: 1440px;
     margin-left: auto;
@@ -324,14 +326,16 @@
   }
 }
 @mixin nom-plat{
+
   h2{ 
     padding: 0px;
     font-size: 1em;
     text-transform: uppercase;
     font-weight: 300; 
+   
   }
 
-  p{
+  h3, p{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -357,8 +361,6 @@
   box-shadow: 4px 4px 6px  rgba(0, 0, 0, 0.25);
   position: relative;
   cursor: pointer;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
   transition: padding-right 450ms ease-in-out;
 }

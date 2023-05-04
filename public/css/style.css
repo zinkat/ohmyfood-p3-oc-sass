@@ -106,7 +106,7 @@ h2 {
   65% {
     left: 60%;
     transform: rotate(0deg);
-    opacity: 0.5;
+    opacity: 1;
   }
   100% {
     left: 100%;
@@ -140,52 +140,40 @@ h2 {
   left: 0;
   right: 0;
   pointer-events: none;
-  animation: loader 4s cubic-bezier(0.39, 0.1, 0.53, 0.82) 4s forwards;
+  animation: loader 1.5s cubic-bezier(0.39, 0.1, 0.53, 0.82) 3.5s forwards;
 }
 @media only screen and (min-width:768px) {
   .loader {
     font-size: 3.5em;
-    animation: loader 5s cubic-bezier(0.39, 0.1, 0.53, 0.82) 4s forwards;
+    animation: loader 2s cubic-bezier(0.39, 0.1, 0.53, 0.82) 4s forwards;
   }
 }
 @media only screen and (min-width:1024px) {
   .loader {
     font-size: 4.5em;
-    animation: loader 6s cubic-bezier(0.39, 0.1, 0.53, 0.82) 4s forwards;
+    animation: loader 3s cubic-bezier(0.39, 0.1, 0.53, 0.82) 4.5s forwards;
   }
 }
 .loader__name span {
   position: absolute;
   opacity: 0;
-  margin-left: -200px;
-  width: 100%;
+  margin-left: -30%;
+  width: 85%;
   top: 40%;
   left: 20%;
-  padding-right: 0em;
-}
-@media only screen and (min-width:768px) {
-  .loader__name span {
-    margin-left: -350px;
-    padding-right: 1em;
-  }
-}
-@media only screen and (min-width:1024px) {
-  .loader__name span {
-    margin-left: -500px;
-    padding-right: 1em;
-  }
+  padding-right: 1em;
 }
 .loader .loader__name span:nth-child(1) {
-  animation: move 2.5s linear infinite;
+  animation: move 2.5s linear 0.05s infinite;
 }
 @media only screen and (min-width:768px) {
   .loader .loader__name span:nth-child(1) {
-    animation: move 3s linear infinite;
+    animation: move 3s linear 0.05s infinite;
   }
 }
 @media only screen and (min-width:1024px) {
   .loader .loader__name span:nth-child(1) {
-    animation: move 4s linear infinite;
+    animation: move 3.8s linear 0.05s infinite;
   }
 }
 .loader .loader__name span:nth-child(2) {
@@ -198,7 +186,7 @@ h2 {
 }
 @media only screen and (min-width:1024px) {
   .loader .loader__name span:nth-child(2) {
-    animation: move 4s linear 0.2s infinite;
+    animation: move 3.8s linear 0.2s infinite;
   }
 }
 .loader .loader__name span:nth-child(3) {
@@ -211,7 +199,7 @@ h2 {
 }
 @media only screen and (min-width:1024px) {
   .loader .loader__name span:nth-child(3) {
-    animation: move 4s linear 0.4s infinite;
+    animation: move 3.8s linear 0.4s infinite;
   }
 }
 .loader .loader__name span:nth-child(4) {
@@ -224,7 +212,7 @@ h2 {
 }
 @media only screen and (min-width:1024px) {
   .loader .loader__name span:nth-child(4) {
-    animation: move 4s linear 0.6s infinite;
+    animation: move 3.8s linear 0.6s infinite;
   }
 }
 .loader .loader__name span:nth-child(5) {
@@ -237,7 +225,7 @@ h2 {
 }
 @media only screen and (min-width:1024px) {
   .loader .loader__name span:nth-child(5) {
-    animation: move 4s linear 0.8s infinite;
+    animation: move 3.8s linear 0.8s infinite;
   }
 }
 .loader .loader__name span:nth-child(6) {
@@ -250,7 +238,7 @@ h2 {
 }
 @media only screen and (min-width:1024px) {
   .loader .loader__name span:nth-child(6) {
-    animation: move 4s linear 1s infinite;
+    animation: move 3.8s linear 1s infinite;
   }
 }
 .loader .loader__name span:nth-child(7) {
@@ -263,7 +251,7 @@ h2 {
 }
 @media only screen and (min-width:1024px) {
   .loader .loader__name span:nth-child(7) {
-    animation: move 4s linear 1.2s infinite;
+    animation: move 3.8s linear 1.2s infinite;
   }
 }
 .loader .loader__name span:nth-child(8) {
@@ -276,13 +264,13 @@ h2 {
 }
 @media only screen and (min-width:1024px) {
   .loader .loader__name span:nth-child(8) {
-    animation: move 4s linear 1.4s infinite;
+    animation: move 3.8s linear 1.4s infinite;
   }
 }
 .loader__utensils {
   vertical-align: middle;
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 45%;
   animation: turn 2s cubic-bezier(0.32, 0.1, 0.64, 0.86) infinite;
 }
@@ -342,14 +330,7 @@ h2 {
 }
 .Apropos h1 {
   padding: 15px 0px;
-  font-size: 1.5em;
-}
-.Apropos p {
-  padding-bottom: 20px;
-  font-size: 1.125em;
-}
-.Apropos__btn {
-  padding-bottom: 30px;
+  font-size: 1.6em;
 }
 @media only screen and (min-width:768px) {
   .Apropos h1 {
@@ -358,8 +339,15 @@ h2 {
 }
 @media only screen and (min-width:1024px) {
   .Apropos h1 {
-    font-size: 2.5em;
+    font-size: 2.3em;
   }
+}
+.Apropos p {
+  padding-bottom: 20px;
+  font-size: 1.125em;
+}
+.Apropos__btn {
+  padding-bottom: 30px;
 }
 @media only screen and (min-width:1024px) {
   .Apropos__btn {
@@ -614,14 +602,13 @@ h2 {
   cursor: pointer;
 }
 .card .info .like:hover {
-  animation: fill 0.3s ease-in-out;
   display: inline-block;
-  opacity: 1;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: bold;
+  animation: fill 0.3s ease-in-out;
 }
 
 /*******footer********/
@@ -754,14 +741,13 @@ footer ul li a .fa-hands-helping {
   cursor: pointer;
 }
 .nom-menu .like:hover {
-  animation: fill 0.3s ease-in-out;
   display: inline-block;
-  opacity: 1;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: bold;
+  animation: fill 0.3s ease-in-out;
 }
 
 .menu {
@@ -788,7 +774,6 @@ footer ul li a .fa-hands-helping {
   .menu {
     padding: 0px 80px;
     width: 75%;
-    margin: auto;
     margin-top: -30px;
     max-width: 1440px;
     margin-left: auto;
@@ -820,7 +805,7 @@ footer ul li a .fa-hands-helping {
   text-transform: uppercase;
   font-weight: 300;
 }
-.plat p {
+.plat h3, .plat p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -860,10 +845,14 @@ footer ul li a .fa-hands-helping {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
   position: relative;
   cursor: pointer;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
   transition: padding-right 450ms ease-in-out;
+}
+@media only screen and (min-width:1024px) {
+  .plat .repas p {
+    font-size: 1.1em;
+    font-weight: 400;
+  }
 }
 .plat .repas:hover {
   padding-right: 80px;
