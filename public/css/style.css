@@ -140,18 +140,18 @@ h2 {
   left: 0;
   right: 0;
   pointer-events: none;
-  animation: loader 1.5s cubic-bezier(0.39, 0.1, 0.53, 0.82) 3.5s forwards;
+  animation: loader 1.5s ease-in-out 3.5s forwards;
 }
 @media only screen and (min-width:768px) {
   .loader {
     font-size: 3.5em;
-    animation: loader 2s cubic-bezier(0.39, 0.1, 0.53, 0.82) 4s forwards;
+    animation: loader 2s ease-in-out 4s forwards;
   }
 }
 @media only screen and (min-width:1024px) {
   .loader {
     font-size: 4.5em;
-    animation: loader 3s cubic-bezier(0.39, 0.1, 0.53, 0.82) 4.5s forwards;
+    animation: loader 3s ease-in-out 5s forwards;
   }
 }
 .loader__name span {
@@ -159,9 +159,8 @@ h2 {
   opacity: 0;
   margin-left: -30%;
   width: 85%;
-  top: 40%;
-  left: 20%;
-  padding-right: 1em;
+  top: 35%;
+  left: 0%;
 }
 .loader .loader__name span:nth-child(1) {
   animation: move 2.5s linear 0.05s infinite;
@@ -270,7 +269,7 @@ h2 {
 .loader__utensils {
   vertical-align: middle;
   position: absolute;
-  top: 52%;
+  top: 55%;
   left: 45%;
   animation: turn 2s cubic-bezier(0.32, 0.1, 0.64, 0.86) infinite;
 }
